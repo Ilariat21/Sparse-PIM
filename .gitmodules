@@ -1,0 +1,3 @@
+[submodule "dramsim3"]
+	path = dramsim3
+	url = https://github.com/Ilariat21/DRAMsim3.git
