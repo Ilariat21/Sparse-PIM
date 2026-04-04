@@ -16,7 +16,8 @@ import matplotlib.pyplot as plt
 from tqdm import tqdm
 from scipy.io import loadmat
 from scipy.sparse import csc_matrix
-from ddr_address_old import dram_encode
+# from ddr_address_old import dram_encode
+from DRAM_address import encode
 import time
 
 
@@ -146,7 +147,7 @@ def str2bool(v):
 # Argument parsing
 parser = argparse.ArgumentParser(description='Generate a random sparse matrix and save to files.')
 
-parser.add_argument('-mat', '--mat', type=str, default='/Data4/home/97ms_local/mat/nasa2910/nasa2910.mtx', help='Input matrix file')
+parser.add_argument('-mat', '--mat', type=str, default='nasa2910.mtx', help='Input matrix file')
 # parser.add_argument('-mat', '--mat', type=str, default='nasa2910.mat', help='Input matrix file')
 parser.add_argument('-Tfm', '--tiling_factor_m', type=int, default=1, help='Tiling factor of the MK matrix')
 parser.add_argument('-Tfn', '--tiling_factor_n', type=int, default=16, help='Tiling factor of the KN matrix')
@@ -310,7 +311,7 @@ def gen_mem_tra(ba, ro, co, accty):
     else:
         row_hit += 1
     cycle_inc(1)
-    trace_list.write('{}\t {}\t {}\n'.format(dram_encode(ba, ro, co), accty, cycle))
+    trace_list.write('{}\t {}\t {}\n'.format(encode(0, 0, 0, ba, ro, co), accty, cycle))
 
 def read_mem_to_buf(ba, ro, co):
     gen_mem_tra(ba, ro, co, 'READ')
@@ -459,7 +460,7 @@ for i in tqdm(range(len(ptr_rows_stn)-1)):
                 if flag ==1:
                     break
                 stn_ptr_chunk = read_mem_to_buf(bank, r1, c1)
-                print(stn_ptr_chunk)
+                # print(stn_ptr_chunk)
                 r2 = r1 + (j-i)*ptr_len + ptr_rows_stn[-1]
                 str_ptr_chunk = read_mem_to_buf(bank, r2, c1)
                 for k in range(len(stn_ptr_chunk)):
@@ -544,7 +545,7 @@ for i in tqdm(range(len(ptr_rows_stn)-1)):
                                                     out_buff[stn_row_buffer[vr+vvr], str_col_buffer[vc+vvc]] = vrf[vr, vc] # get data from VRF to Output buffer
                                         
                     last_str_ptr, last_stn_ptr = str_ptr_chunk[k], stn_ptr_chunk[k]
-            print(stn_ptr_chunk)
+            # print(stn_ptr_chunk)
             time.sleep(0.1)
         for g in range(out_buff.shape[0]): # save to DRAM
             for h in range(0, out_buff.shape[1], DRAM_COLSZ):
@@ -598,8 +599,8 @@ print("eff", eff)
 
 # print("utttt", sum(sd)/(len(sd)*DRAM_COLSZ)*100)
 
-for i in range(5):
-    print(ch_res[0, :20])
+# for i in range(5):
+#     print(ch_res[0, :20])
 # print("ratio", eff/(util*DRAM_COLSZ*DRAM_COLSZ)*100)
 
 
