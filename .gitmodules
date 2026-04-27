@@ -1,3 +1,6 @@
 [submodule "dramsim3"]
 	path = dramsim3
 	url = https://github.com/Ilariat21/DRAMsim3.git
+[submodule "gem5"]
+	path = gem5
+	url = git@github.com:Ilariat21/gem5.git
