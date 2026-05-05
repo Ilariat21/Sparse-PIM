@@ -1,0 +1,27 @@
+Command: time ./build/X86/gem5.opt configs/deva2.py -mat mat/t2dah_a.mtx -tau 256 -Tf 1
+Matrix: t2dah_a, tf: 1, tau: 256
+============================================================
+
+Global frequency set at 1000000000000 ticks per second
+WARNING: Cannot create memory system of size 8192MB with given device choice! Using default size 65536 instead!
+gem5 Simulator System.  https://www.gem5.org
+gem5 is copyrighted software; use the --copyright option for details.
+
+gem5 version 24.0.0.1
+gem5 compiled Apr  6 2025 19:50:17
+gem5 started Sep 30 2025 18:43:51
+gem5 executing on titan9, pid 22632
+command line: ./build/X86/gem5.opt configs/deva2.py -mat mat/t2dah_a.mtx -tau 256 -Tf 1
+
+========== Beginning simulation ==========
+RUNNING UPDATED VERSION — STEP 1
+number of lines: 93795 0 0
+Tf=1	 tau=256
+DRAM_Configs: BANKS: 1	 ROWS: 131072	 COLS: 128	 COLSZ: 8
+# tiles: 1
+Tm size: 1
+subtiles per bank: 1
+
+============================================================
+Command failed with return code 134
+Log saved to: report/t2dah_a_tf1_tau256_log.txt

@@ -1,0 +1,31 @@
+Command: time ./build/X86/gem5.opt configs/deva2.py -mat mat/bcsstk24.mtx -tau 256 -Tf 32
+Matrix: bcsstk24, tf: 32, tau: 256
+============================================================
+
+Global frequency set at 1000000000000 ticks per second
+WARNING: Cannot create memory system of size 8192MB with given device choice! Using default size 65536 instead!
+gem5 Simulator System.  https://www.gem5.org
+gem5 is copyrighted software; use the --copyright option for details.
+
+gem5 version 24.0.0.1
+gem5 compiled Apr  6 2025 19:50:17
+gem5 started Oct  1 2025 00:03:55
+gem5 executing on titan9, pid 99382
+command line: ./build/X86/gem5.opt configs/deva2.py -mat mat/bcsstk24.mtx -tau 256 -Tf 32
+
+========== Beginning simulation ==========
+RUNNING UPDATED VERSION — STEP 1
+number of lines: 81750 0 0
+Tf=32	 tau=256
+DRAM_Configs: BANKS: 1024	 ROWS: 131072	 COLS: 128	 COLSZ: 8
+# tiles: 1
+Tm size: 1
+subtiles per bank: 1
+Partitioning time: 7575.000000 us
+Data transfer time: 159.000000 us
+Total time: 7734.000000 us
+Exiting @ tick 36508421034 because exiting with last active thread context
+
+============================================================
+Command executed successfully
+Log saved to: report/bcsstk24_tf32_tau256_log.txt

@@ -1,0 +1,24 @@
+Matrix: poisson3Da
+============================================================
+
+Partitioning Time (us)
+------------------------------
+tf\tau	32	64	128	256	512	1024	
+1	N/A	N/A	N/A	N/A	N/A	N/A	
+2	N/A	N/A	N/A	N/A	N/A	N/A	
+4	N/A	N/A	N/A	N/A	N/A	N/A	
+8	N/A	N/A	N/A	N/A	N/A	N/A	
+16	N/A	N/A	N/A	N/A	N/A	N/A	
+32	40740.00	40740.00	40755.00	40755.00	40755.00	40753.00	
+
+Data Transfer Time (us)
+------------------------------
+tf\tau	32	64	128	256	512	1024	
+1	N/A	N/A	N/A	N/A	N/A	N/A	
+2	N/A	N/A	N/A	N/A	N/A	N/A	
+4	N/A	N/A	N/A	N/A	N/A	N/A	
+8	N/A	N/A	N/A	N/A	N/A	N/A	
+16	N/A	N/A	N/A	N/A	N/A	N/A	
+32	988.00	988.00	987.00	987.00	987.00	988.00	
+
+============================================================

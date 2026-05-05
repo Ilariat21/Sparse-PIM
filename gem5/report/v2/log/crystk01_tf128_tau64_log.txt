@@ -1,0 +1,31 @@
+Command: time ./build/X86/gem5.opt configs/deva2.py -mat mat/crystk01.mtx -tau 64 -Tf 128
+Matrix: crystk01, tf: 128, tau: 64
+============================================================
+
+Global frequency set at 1000000000000 ticks per second
+WARNING: Cannot create memory system of size 8192MB with given device choice! Using default size 65536 instead!
+gem5 Simulator System.  https://www.gem5.org
+gem5 is copyrighted software; use the --copyright option for details.
+
+gem5 version 24.0.0.1
+gem5 compiled Apr  6 2025 19:50:17
+gem5 started Oct  1 2025 19:56:50
+gem5 executing on titan9, pid 376435
+command line: ./build/X86/gem5.opt configs/deva2.py -mat mat/crystk01.mtx -tau 64 -Tf 128
+
+========== Beginning simulation ==========
+RUNNING UPDATED VERSION — STEP 1
+number of lines: 160397 0 0
+Tf=128	 tau=64
+DRAM_Configs: BANKS: 16384	 ROWS: 131072	 COLS: 128	 COLSZ: 8
+# tiles: 1
+Tm size: 1
+subtiles per bank: 1
+Partitioning time: 15634.000000 us
+Data transfer time: 485.000000 us
+Total time: 16119.000000 us
+Exiting @ tick 81268102215 because exiting with last active thread context
+
+============================================================
+Command executed successfully
+Log saved to: report/v2/crystk01_tf128_tau64_log.txt

@@ -1,0 +1,27 @@
+Command: time ./build/X86/gem5.opt configs/deva2.py -mat mat/nasa2910.mtx -tau 1024 -Tf 16
+Matrix: nasa2910, tf: 16, tau: 1024
+============================================================
+
+Global frequency set at 1000000000000 ticks per second
+WARNING: Cannot create memory system of size 8192MB with given device choice! Using default size 65536 instead!
+gem5 Simulator System.  https://www.gem5.org
+gem5 is copyrighted software; use the --copyright option for details.
+
+gem5 version 24.0.0.1
+gem5 compiled Apr  6 2025 19:50:17
+gem5 started Sep 30 2025 22:13:11
+gem5 executing on titan9, pid 96963
+command line: ./build/X86/gem5.opt configs/deva2.py -mat mat/nasa2910.mtx -tau 1024 -Tf 16
+
+========== Beginning simulation ==========
+RUNNING UPDATED VERSION — STEP 1
+number of lines: 88620 0 0
+Tf=16	 tau=1024
+DRAM_Configs: BANKS: 256	 ROWS: 131072	 COLS: 128	 COLSZ: 8
+# tiles: 1
+Tm size: 1
+subtiles per bank: 1
+
+============================================================
+Command failed with return code 134
+Log saved to: report/nasa2910_tf16_tau1024_log.txt

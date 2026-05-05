@@ -1,0 +1,27 @@
+Command: time ./build/X86/gem5.opt configs/deva2.py -mat mat/ex9.mtx -tau 32 -Tf 256
+Matrix: ex9, tf: 256, tau: 32
+============================================================
+
+Global frequency set at 1000000000000 ticks per second
+WARNING: Cannot create memory system of size 8192MB with given device choice! Using default size 65536 instead!
+gem5 Simulator System.  https://www.gem5.org
+gem5 is copyrighted software; use the --copyright option for details.
+
+gem5 version 24.0.0.1
+gem5 compiled Apr  6 2025 19:50:17
+gem5 started Oct  1 2025 16:44:22
+gem5 executing on titan9, pid 297781
+command line: ./build/X86/gem5.opt configs/deva2.py -mat mat/ex9.mtx -tau 32 -Tf 256
+
+========== Beginning simulation ==========
+RUNNING UPDATED VERSION — STEP 1
+number of lines: 51431 0 0
+Tf=256	 tau=32
+DRAM_Configs: BANKS: 65536	 ROWS: 131072	 COLS: 128	 COLSZ: 8
+# tiles: 1
+Tm size: 1
+subtiles per bank: 1
+
+============================================================
+Command failed with return code 134
+Log saved to: report/v2/ex9_tf256_tau32_log.txt
