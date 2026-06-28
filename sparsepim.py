@@ -16,8 +16,8 @@ import matplotlib.pyplot as plt
 from tqdm import tqdm
 from scipy.io import loadmat
 from scipy.sparse import csc_matrix
-# from ddr_address_old import dram_encode
-from DRAM_address import encode
+from ddr_address_old import dram_encode
+# from DRAM_address import encode
 import time
 
 
@@ -311,7 +311,7 @@ def gen_mem_tra(ba, ro, co, accty):
     else:
         row_hit += 1
     cycle_inc(1)
-    trace_list.write('{}\t {}\t {}\n'.format(encode(0, 0, 0, ba, ro, co), accty, cycle))
+    trace_list.write('{}\t {}\t {}\n'.format(dram_encode(ba, ro, co), accty, cycle))
 
 def read_mem_to_buf(ba, ro, co):
     gen_mem_tra(ba, ro, co, 'READ')
